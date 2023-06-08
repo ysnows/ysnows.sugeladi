@@ -1,5 +1,5 @@
 name: 苏格拉底式提问
-version: 0.0.1
+version: 0.0.2
 author: ysnows
 on: { }
 steps:
@@ -23,9 +23,11 @@ Answer: The answer to the initial question
 Question: The question about the reason for the previous answer
 Answer: The answer to the previous question
 Question:
-Keep asking about the reason for the last answer. Stop only when the answer is "That is the way it is" or "We do not know for now". Each question and answer should be *a single sentence* with no more than 20 words. Add "Q: " before each question and "A: " before each answer.
+Keep asking about the reason for the last answer. Stop only when the answer is "That is the way it is" or "We do not know for now". 
 Ask and answer in "Chinese" regardless of the language I use. Don’t show the translation process. Just write questions and answers in the destination language.
-Now, the initial question is: {{text|contextText|copiedText}}'
+respond using markdown like(each question and answer should be no more than 20 words. Add "Q: " with bold font before each question and "> A: " before each answer. There are line breaks between questions and answers, every question and answer is a set,There are two line breaks between each group.): 
+Now, the initial question is: {{text|contextText|copiedText}}
+'
       Temperature:
         type: enum
         value: '1.0'
