@@ -1,6 +1,11 @@
 {
   "identifier": "ysnows.sugeladi",
   "versions": [
-
+    {
+      "version": "0.0.1",
+      "desc": "feat: 1. readme",
+      "url": "https://github.com/ysnows/ysnows.sugeladi/releases/download/v0.0.1/ysnows.sugeladi.enconvoplugin",
+      "minAppVersion": "1.1.8"
+    }
   ]
 }
