@@ -1,7 +1,7 @@
 name: 苏格拉底式提问
-version: 0.0.2
+version: 0.0.3
 author: ysnows
-on: { }
+on: {}
 steps:
   - name: ''
     uses: prompt
@@ -10,29 +10,29 @@ steps:
         type: enum
         value: gpt-3.5-turbo
         sort: 0
-        messages: [ ]
+        messages: []
       Messages:
         type: messages
         value: ''
         sort: 2
         messages:
           - role: system
-            content: 'Your task is to **automatically** take turns asking and answering questions. We’ll begin with an initial question. Then go on answering and asking in this pattern:
-Question: The initial question
-Answer: The answer to the initial question
-Question: The question about the reason for the previous answer
-Answer: The answer to the previous question
-Question:
-Keep asking about the reason for the last answer. Stop only when the answer is "That is the way it is" or "We do not know for now". 
-Ask and answer in "Chinese" regardless of the language I use. Don’t show the translation process. Just write questions and answers in the destination language.
-respond using markdown like(each question and answer should be no more than 20 words. Add "Q: " with bold font before each question and "> A: " before each answer. There are line breaks between questions and answers, every question and answer is a set,There are two line breaks between each group.): 
-Now, the initial question is: {{text|contextText|copiedText}}
-'
+            content: |-
+              Your task is to **automatically** take turns asking and answering questions. We’ll begin with an initial question. Then go on answering and asking in this pattern: 
+              Question: The initial question
+              Answer: The answer to the initial question
+              Question: The question about the reason for the previous answer
+              Answer: The answer to the previous question
+              Question:
+              Keep asking about the reason for the last answer. Stop only when the answer is "That is the way it is" or "We do not know for now". 
+              Ask and answer in "Chinese" regardless of the language I use. Don’t show the translation process. Just write questions and answers in the destination language.
+              respond using markdown like(each question and answer should be no more than 20 words. Add "Q: " with bold font before each question and "> A: " before each answer. There are line breaks between questions and answers, every question and answer is a set,There are two line breaks between each group.): 
+              Now, the initial question is: {{text|contextText|copiedText}}
       Temperature:
         type: enum
         value: '1.0'
         sort: 1
-        messages: [ ]
+        messages: []
 extensionId: ysnows.sugeladi
 logo: ns:translate
 description: 利用苏格拉底式的提问方法，反复提问探索问题的本质
@@ -69,7 +69,7 @@ options:
         type: text
         title: Alias
         defaultValue: 'sugeladi'
-        menuValues: [ ]
+        menuValues: []
         desc: ''
         placeholderText: Add alias
         textWidth: 1.6e+2
@@ -78,9 +78,10 @@ options:
         type: hotkey
         title: Hotkey
         defaultValue: ''
-        menuValues: [ ]
-        desc: "This shortcut will open an ai conversation window from anywhere in the
-      system\n      . Make sure it is not conflicting with other global shortcuts."
+        menuValues: []
+        desc: |-
+          "This shortcut will open an ai conversation window from anywhere in the 
+          system\n      . Make sure it is not conflicting with other global shortcuts."
         placeholderText: Add a hotkey to global start
         textWidth: 1.6e+2
         disable: false

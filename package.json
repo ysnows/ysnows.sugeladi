@@ -1,0 +1,32 @@
+{
+  "name": "ysnows.sugeladi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dist": "node dist/main.js",
+    "lint": "eslint src",
+    "lint:fix": "npm run lint --fix",
+    "format": "prettier --write \"**/*.ts\"",
+    "format:check": "prettier --list-different \"**/*.ts\"",
+    "build": "node build.js",
+    "deploy": "npm run build &&  cp -r dist/* ~/Library/Application\\ Support/Enconvo/extension/ysnows.sugeladi"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ysnows/ysnows.sugeladi.git"
+  },
+  "author": "ysnows",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ysnows/ysnows.sugeladi/issues"
+  },
+  "homepage": "https://github.com/ysnows/ysnows.sugeladi#readme",
+  "sideEffects": [
+    "*.js"
+  ],
+  "dependencies": {
+    "enconvo": "^1.5.5"
+  }
+}

@@ -18,9 +18,13 @@ jobs:
         uses: actions/checkout@v3
       - name: Set zip file name
         run: echo "ZIP_NAME=$(basename $(pwd)).enconvoplugin" >> $GITHUB_ENV
+      - name: install
+        run: npm install
+      - name: dist
+        run: npm run build
       # 将dist目录打成zip包
       - name: Zip Dist
-        run: zip -r $ZIP_NAME . -x "appcast.json" -x "*.github/*" -x "*.git/*" -x "*.idea/*" -x "*.scripts/*"
+        run: cd dist && zip -r ../$ZIP_NAME ./*
       # 创建Release
       - name: Create Release
         id: create_release
