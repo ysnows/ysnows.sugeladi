@@ -2,6 +2,12 @@
   "identifier": "ysnows.sugeladi",
   "versions": [
     {
+      "version": "0.0.3",
+      "desc": "Bump version to 0.0.3",
+      "url": "https://github.com/ysnows/ysnows.sugeladi/releases/download/v0.0.3/ysnows.sugeladi.enconvoplugin",
+      "minAppVersion": "1.1.8"
+    },
+    {
       "version": "0.0.2",
       "desc": "Merge remote-tracking branch 'origin/main'",
       "url": "https://github.com/ysnows/ysnows.sugeladi/releases/download/v0.0.2/ysnows.sugeladi.enconvoplugin",
